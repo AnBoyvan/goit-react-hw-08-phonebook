@@ -6,6 +6,7 @@ import ContactForm from './ContactForm/ContactForm';
 import ContactList from './ContactList/ContactList';
 import Filter from './Filter/Filter';
 import css from './Phonebook.module.css';
+import { Box } from '@mui/material';
 
 const Phonebook = () => {
   const allContacts = useSelector(getAllContacts);
@@ -14,8 +15,17 @@ const Phonebook = () => {
     dispatch(fetchContacts());
   }, [dispatch]);
   return (
-    <div className={css.section}>
-      <h1>Phonebook</h1>
+    <Box
+      margin={1}
+      marginLeft="auto"
+      marginRight="auto"
+      width="400px"
+      backgroundColor="#ffff"
+      borderRadius="5px"
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+    >
       <ContactForm />
       <h2>Contacts</h2>
       <Filter />
@@ -25,7 +35,7 @@ const Phonebook = () => {
         </p>
       )}
       <ContactList />
-    </div>
+    </Box>
   );
 };
 

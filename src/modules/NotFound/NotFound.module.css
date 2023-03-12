@@ -1,0 +1,8 @@
+.title {
+  margin: 0 50px;
+  margin-top: 50px;
+  font-size: 32px;
+  color: red;
+  text-align: center;
+  text-shadow: -2px 4px 4px rgb(0 0 0);
+}
